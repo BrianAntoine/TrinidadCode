@@ -1,3 +1,4 @@
+type="module"
  // Import the functions you need from the SDKs you need
  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
  import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut  } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
@@ -40,6 +41,7 @@
      document.getElementById("result-box").style.display="inline";
       document.getElementById("login-div").style.display="none";
       document.getElementById("result").innerHTML="Welcome Back<br>"+loginEmail+" was Login Successfully";
+      window.location.href ="user.html";
    })
    .catch((error) => {
      const errorCode = error.code;
